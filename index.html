@@ -20,6 +20,27 @@
                     <div class="form-group col-xl-lg-md-sm col-6"> 
                         <label for="EC">Explorer Club name:</label>
                         <input type="text" class="form-control" id="EC" name="EC">
+                    </div>
+                    <div class="form-group col-xl-lg-md-sm col-6"> 
+                        <label for="time_availability">Time availability:</label>
+                        <input type="text" class="form-control" id="time_availability" name="time_availability">
+                    </div> 
+                    <div class="form-group col-xl-lg-md-sm col-6"> 
+                        <label for="Timezone">Timezone:</label>
+                        <select class="form-control" id="Timezone" name="Timezone"> 
+                            <option>CST (UTC +8)</option>
+                            <option>EET (UTC +2)</option>
+                            <option>CET (UTC +1)</option>
+                            <option>GMT (UTC +0)</option> 
+                            <option>EST (UTC -5)</option>
+                            <option>CST (UTC -6)</option>
+                            <option>PST (UTC -8)</option>
+                            <option>Other</option>
+                        </select> 
+                        <div class="form-group col-xl-lg-md-sm col-6"> 
+                            <label for="time_other">If you chose other, please specify:</label>
+                            <input type="text" class="form-control" id="time_other" name="time_other">
+                        </div> 
                     </div> 
                     <div class="row">
                         <p class="break"></p>
@@ -50,7 +71,7 @@
                     <img src="https://i.imgur.com/XET5or3.png" class="img-fluid col-xl-lg-md-sm col-12" alt="Responsive image">
                 </div>
             </div>
-
+            <button type="submit" class="btn btn-primary">SUBMIT</button> 
         </form>
     </div>
 
