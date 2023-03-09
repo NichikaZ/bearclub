@@ -8,12 +8,20 @@
     <meta name="author" content="Oscar_Zhu">
     <link rel="stylesheet" href="docs/css/css.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+
+    </style>
 </head>
 <body>
-    <img src="https://i.imgur.com/0AROYSz.png" class="img-fluid col-xl-lg-md-sm col-12" alt="Responsive image">
     <div>
-        <h1 class="theheader">Bearclub Bakal raid form</h1>
-        <p class="theheader">  Please input the data as truthfully as possible</p>
+        <div class="container">
+            <img src="https://i.imgur.com/0AROYSz.png" class="img-fluid col-xl-lg-md-sm col-12 mainImg" alt="Responsive image">
+            <h1 class="theheader centered">BearClub Bakal raid form</h1>
+            <!--Need to fixx "Please input the data as truthfully as possible
+                it is overlapping with the "BearCLub Bakal raid form title when window is shrunken"-->
+            <p class="theheader belowCentered">Please input the data as truthfully as possible</p>
+        </div>
+        
         <form class="theform">
             <div class="row">
                 <div class="col-xl-lg-md-sm col-6">
@@ -22,8 +30,10 @@
                         <input type="text" class="form-control" id="EC" name="EC">
                     </div>
                     <div class="form-group col-xl-lg-md-sm col-6"> 
-                        <label for="time_availability">Time availability:</label>
-                        <input type="text" class="form-control" id="time_availability" name="time_availability">
+                        <label for="Time_availability_start">Time availability start:</label>
+                        <input type="number" class="form-control" id="Time_availability_start" name="Time_availability_start">
+                        <label for="Time_availability_end">Time availability end:</label>
+                        <input type="number" class="form-control" id="Time_availability_end" name="Time_availability_end">
                     </div> 
                     <div class="form-group col-xl-lg-md-sm col-6"> 
                         <label for="Timezone">Timezone:</label>
@@ -41,6 +51,15 @@
                             <label for="time_other">If you chose other, please specify:</label>
                             <input type="text" class="form-control" id="time_other" name="time_other">
                         </div> 
+
+                        <!--Timezone_test
+                        Testing to see if this calendar input, gives an output of that persons timezone in console
+                        still testing dont touch yet-->
+                        <label for="Timezone_test">Timezone_Test:</label>
+                        <input type="datetime-local" class="form-control" id="Timezone_test" name="Timezone_test"></select>
+                       
+                        <!--end of Timezone_test-->
+
                     </div> 
                     <div class="row">
                         <p class="break"></p>
@@ -68,7 +87,7 @@
                     </div>
                 </div>
                 <div class="col-xl-lg-md-sm col-6">
-                    <img src="https://i.imgur.com/XET5or3.png" class="img-fluid col-xl-lg-md-sm col-12" alt="Responsive image">
+                    <img src="https://i.imgur.com/XET5or3.png" class="img-fluid col-xl-lg-md-sm col-12 removeWhiteBG" alt="Responsive image">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">SUBMIT</button> 

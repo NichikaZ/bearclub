@@ -1,9 +1,47 @@
+body {
+    background: linear-gradient(to top, #a57816, #a70505);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainImg {
+    opacity: .85;
+}
+
+/*  
+.removeWhiteBG {
+    mix-blend-mode: multiply;
+}
+*/
+
+.container {
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.centered {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+.belowCentered {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
 .break{
     margin-top: 15px;
     margin-bottom: 15px
 }
 .theform{
     margin-left:20px;
+    color:rgb(255, 255, 255);
 }
 .theheader{
     margin-top:10px;
