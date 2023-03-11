@@ -63,6 +63,10 @@ function sendAlert() {
         "Explorer Club ID: \n" +
         "Number of Sader: ");
     }
+    else if(EC.length == 0) {
+        alert("Please enter the following: \n" +
+        "Explorer Club ID: ");
+    }
     else if(countDps == 0 && countSader == 0) {
         alert("Please enter the following: \n" + 
         "NUmber of DPS: \n" +
