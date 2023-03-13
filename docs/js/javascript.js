@@ -9,6 +9,18 @@ var timeAvalStart; //html Time_availability_start (need to add function)
 var timeAvalEnd; //html Time_availability_end (need to add function)
 var btnSubmit1;
 
+var btnConfirmD1; //btnConfirmD
+var btnConfirmS1; //btnConfirmS 
+
+var char_info_panel; //char_info
+
+//DPSname
+//DPSfame
+//DPSbuild
+//build_other
+
+
+
 //end of global variables
 
 
@@ -44,7 +56,7 @@ function getTimeZoneTest() {
 
 function sendAlert() {
     //fill this place with one alert message through if else statement
-    //instead of sending multiple alert windows
+    //instead of sending multiple alert windowss
     if (EC.length == 0 && countDps == 0 && countSader ==0)
     {
         //console.log("Explorer Club Id is null not entered");
@@ -90,6 +102,7 @@ function sendAlert() {
         "Number of Saders: " + countSader);
         console.log("Error message for later if timezone is not filled out");
     }
+
 }
 
 //NEED TO MAKE A FUNCTION TO CONVERT TIME FROM TIME ZONE
@@ -113,17 +126,41 @@ function btnSubmit() {
     getDps();
     getSader();
     sendAlert();
-    
+}
+
+function btnConfirmDPS() {
+    getEC();
+    getTimeZone();
+    getTimeZoneTest();
+    getDps();
+    getSader();
+    if (countDps != 0 && countSader != 0 && EC.length != 0){
+        char_info_panel.classList.remove("hidden");
+    }
+    else {
+        sendAlert();
+    }
 }
 
 //document ready
 $(document).ready(function() {
     console.log("ready!");
     btnSubmit1 = document.getElementById('btnSubmit');
-   
+    btnConfirmD1 = document.getElementById('btnConfirmD');
+    char_info_panel = document.getElementById('char_info'); 
+    //console.log(char_info_panel); //this too
+    //char_info_panel.classList.remove("hidden"); //this too
+
+    btnConfirmD1.addEventListener('click', function ()
+    {
+        btnConfirmDPS();
+    });
+
     btnSubmit1.addEventListener('click', function () 
     {
         btnSubmit();
     });
+
+    
 
 });
