@@ -17,7 +17,7 @@
 <body>
     <div>
         <div class="container">
-            <img src="https://i.imgur.com/0AROYSz.png" class="img-fluid col-xl-lg-md-sm col-12 mainImg" alt="Responsive image">
+            <img src="/docs/imgs/bearclub.png" class="img-fluid col-xl-lg-md-sm col-12 mainImg" alt="Responsive image">
             <h1 class="theheader centered">BearClub Bakal raid form</h1>
             <!--Need to fixx "Please input the data as truthfully as possible
                 it is overlapping with the "BearCLub Bakal raid form title when window is shrunken"-->
@@ -59,7 +59,6 @@
                         still testing dont touch yet-->
                         <label for="Timezone_test">Timezone_Test:</label>
                         <input type="datetime-local" class="form-control" id="Timezone_test" name="Timezone_test"></select>
-                       
                         <!--end of Timezone_test-->
 
                     </div> 
@@ -68,33 +67,51 @@
                         <h4>For now, you can bring the character as long as it meets the entry fame</h4>
                         <div class="form-group col-xl-lg-md-sm col-2">        
                             <label for="DPScount">Amount of DPS</label> 
-                            <select class="form-control" id="DPScount" name="DPScount"> 
-                                <option>0</option>
-                                <option>1</option> 
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6 or more</option>
-                            </select> 
-                        </div>
-                        <div class="form-group col-xl-lg-md-sm col-2">          
+                            <input type="number" id="DPScount" name="DPScount"> 
+                            <button type="button" class="btn btn-primary" id="btnSubmit">CONFIRM</button>       
                             <label for="Sadercount">Amount of Sader</label> 
-                            <select class="form-control" id="Sadercount" name="Sadercount"> 
-                                <option>0</option>
-                                <option>1</option> 
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4 or more</option>
+                            <input type="number" id="Sadercount" name="Sadercount"> 
+                            <button type="button" class="btn btn-primary" id="btnSubmit">CONFIRM</button> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form group col-xl-lg-md-sm col-4">
+                            <label for="DPSname">Name</label> 
+                            <input type="text" id="DPSname" name="DPSname"> 
+                            <label for="DPSfame">Fame</label> 
+                            <input type="number" id="DPSfame" name="DPSfame"> 
+                            <label for="DPSbuild">Build type</label> 
+                            <select class="form-control" id="DPSbuild" name="DPSbuild"> 
+                                <option>Speeder 30% + Status</option>
+                                <option>Manual</option>
+                                <option>Moving Forward from the Past</option>
+                                <option>Archon</option>
+                                <option>MP3</option>
+                                <option>Sleeper</option> 
+                                <option>Manual</option>
+                                <option>Stepping Courage Set</option>
+                                <option>A Step Towards Hope Set</option>
+                                <option>Other</option>
                             </select> 
+                            <label for="build_other">If you chose other, please specify:</label>
+                            <input type="text" class="form-control" id="build_other" name="build_other">
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-lg-md-sm col-6">
                     <img src="docs/imgs/DK.png" class="img-fluid col-xl-lg-md-sm col-12" alt="Responsive image">                    <br><br>
                 </div>
-                <p class='break'></p>
-                <button type="button" class="btn btn-primary" id="btnSubmit">SUBMIT</button> 
+                <div class="row">
+                    <p class='break'></p>
+                    <div class="col-xl-lg-md-sm col-3">
+                        <img src="/docs/imgs/final.png" class="img-fluid" alt="Responsive image">
+                    </div>
+                    <div class="col-xl-lg-md-sm col-3">
+                        <p class='break'></p>
+                        <button type="button" class="btn btn-primary" id="btnSubmit">SUBMIT</button> 
+                    </div>
+                </div>
+
             </div>
             <!--original button
             <button type="submit" class="btn btn-primary">SUBMIT</button> 
