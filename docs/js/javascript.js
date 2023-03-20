@@ -160,7 +160,112 @@ $(document).ready(function() {
     {
         btnSubmit();
     });
+    (function dynamic_form() {
 
+        const formContainer = $('#form-container');
+        const bufferContainer = $('#buffer-container');
+        const numberInput = $('#dpsform');
+        const bufferInput = $('#buffer');
     
+        numberInput.on('input', function() {
+            const numForms = parseInt($(this).val());
+            formContainer.empty(); // clear previous forms
+            for (let i = 0; i < numForms; i++) {
+                const formGroup = $('<div class="form-group"></div>');
+                const dpsLabel = $('<label></label>')
+                    .attr('for', `dps-${i}`)
+                    .text(`DPS ${i + 1}:`);
+                const dpsInput = $('<input class="form-control"></input>')
+                    .attr('type', 'text')
+                    .attr('id', `dps-${i}`)
+                    .attr('name', `dps-${i}`)
+                    .attr('required', true);
+                const fameLabel = $('<label></label>')
+                    .attr('for', `fame-${i}`)
+                    .text(`Fame ${i + 1}:`);
+                const fameInput = $('<input class="form-control"></input>')
+                    .attr('type', 'number')
+                    .attr('id', `fame-${i}`)
+                    .attr('name', `fame-${i}`)
+                    .attr('min', '0')
+                    .attr('max', '100')
+                    .attr('required', true);
+                const dropdownLabel = $('<label></label>')
+                    .attr('for', `dropdown-${i}`)
+                    .text(`Dropdown ${i + 1}:`);
+                const dropdown = $('<select class="form-control"></select>')
+                    .attr('id', `dropdown-${i}`)
+                    .attr('name', `dropdown-${i}`);
+                const option1 = $('<option></option>')
+                    .attr('value', 'option1')
+                    .text('Option 1');
+                const option2 = $('<option></option>')
+                    .attr('value', 'option2')
+                    .text('Option 2');
+                const option3 = $('<option></option>')
+                    .attr('value', 'option3')
+                    .text('Option 3');
+                dropdown.append(option1);
+                dropdown.append(option2);
+                dropdown.append(option3);
+                formGroup.append(dpsLabel);
+                formGroup.append(dpsInput);
+                formGroup.append(fameLabel);
+                formGroup.append(fameInput);
+                formGroup.append(dropdownLabel);
+                formGroup.append(dropdown);
+                formContainer.append(formGroup);
+            }
+        });
+
+        bufferInput.on('input', function() {
+            const numForms = parseInt($(this).val());
+            bufferContainer.empty(); // clear previous forms
+            for (let i = 0; i < numForms; i++) {
+                const formGroup = $('<div class="form-group"></div>');
+                const bufferNameLabel = $('<label></label>')
+                    .attr('for', `buffer-name-${i}`)
+                    .text(`Buffer Name ${i + 1}:`);
+                const bufferNameInput = $('<input class="form-control"></input>')
+                    .attr('type', 'text')
+                    .attr('id', `buffer-name-${i}`)
+                    .attr('name', `buffer-name-${i}`)
+                    .attr('required', true);
+                const fameLabel = $('<label></label>')
+                    .attr('for', `fame-${i}`)
+                    .text(`Fame ${i + 1}:`);
+                const fameInput = $('<input class="form-control"></input>')
+                    .attr('type', 'number')
+                    .attr('id', `fame-${i}`)
+                    .attr('name', `fame-${i}`)
+                    .attr('required', true);
+                const statBuffLabel = $('<label></label>')
+                    .attr('for', `statbuff-${i}`)
+                    .text(`Stat Buff ${i + 1}:`);
+                const statBuffInput = $('<input class="form-control"></input>')
+                    .attr('type', 'number')
+                    .attr('id', `statbuff-${i}`)
+                    .attr('name', `statbuff-${i}`)
+                    .attr('required', true);
+                const pmiLabel = $('<label></label>')
+                    .attr('for', `pmi-${i}`)
+                    .text(`PMI ${i + 1}:`);
+                const pmiInput = $('<input class="form-control"></input>')
+                    .attr('type', 'number')
+                    .attr('id', `pmi-${i}`)
+                    .attr('name', `pmi-${i}`)
+                    .attr('required', true);
+                formGroup.append(bufferNameLabel);
+                formGroup.append(bufferNameInput);
+                formGroup.append(fameLabel);
+                formGroup.append(fameInput);
+                formGroup.append(statBuffLabel);
+                formGroup.append(statBuffInput);
+                formGroup.append(pmiLabel);
+                formGroup.append(pmiInput);
+                bufferContainer.append(formGroup);
+            }
+        });
+    })();
 
 });
